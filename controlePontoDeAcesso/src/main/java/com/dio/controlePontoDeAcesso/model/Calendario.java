@@ -2,9 +2,7 @@ package com.dio.controlePontoDeAcesso.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter
@@ -16,6 +14,7 @@ import java.time.LocalDateTime;
 @Entity
 public class Calendario {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
     private TipoData tipoData;
